@@ -1,6 +1,7 @@
 import express from "express"
 import config from "./config/config"
 import redisClient from "./redis/index"
+import router from "./routes/index..route"
 
 const app = express()
 
@@ -25,6 +26,8 @@ app.get("/redis-test", async (req, res) => {
     res.status(500).send("Internal Server Error")
   }
 })
+
+app.use("/", router)
 
 app.listen(config.server.port, () => {
   console.log(`Bip bop, Server is running on port ${config.server.port}`)

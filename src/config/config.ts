@@ -8,6 +8,7 @@ const config = {
     password: process.env.REDIS_PASSWORD
   },
   weather: {
+    apiUrl: process.env.WEATHER_API_BASE_URL,
     apiKey: process.env.WEATHER_API_KEY
   },
   server: {
